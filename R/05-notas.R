@@ -21,7 +21,7 @@ summary(
 ))
 
 ## Creemos las imágenes usando ExploreModelMatrix
-vd <- ExploreModelMatrix::VisualizeDesign(
+vd <- ExploreModelMatrix::VisualizeDesign( ##Esta función nos permite visualizarla
   sampleData = sampleData,
   designFormula = ~ genotype + treatment,
   textSizeFitted = 4
@@ -29,15 +29,23 @@ vd <- ExploreModelMatrix::VisualizeDesign(
 
 ## Veamos las imágenes
 cowplot::plot_grid(plotlist = vd$plotlist)
+## Nos permite hacer restas de modo que podamos ver de donde viene cada objeto
+## Generalmente estas restas se hacen entre columnas y entre filas
+## En conclusión nos permite dar una interpretación
 
+mat2 <- with(sampleData, model.matri(~ genotype + treatment)
+mat2
+sampleData
 
 ## ----EMM_example1_interactive, eval = FALSE-------------------
 # ## Usaremos shiny otra ves
-# app <- ExploreModelMatrix(
-#     sampleData = sampleData,
-#     designFormula = ~ genotype + treatment
-# )
-# if (interactive()) shiny::runApp(app)
+app <- ExploreModelMatrix(
+  sampleData = sampleData,
+  designFormula = ~ genotype + treatment
+)$app  # Extraer la aplicación Shiny
+
+if (interactive()) shiny::runApp(app)
+
 
 
 ## ----download_SRP045638---------------------------------------
