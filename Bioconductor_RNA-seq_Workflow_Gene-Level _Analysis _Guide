@@ -1,0 +1,27 @@
+# Bioconductor 
+
+**Version:** Bioconductor 3.20  
+**Workflow Package:** `rnaseqGene`  
+
+## Package Review: RNA-seq Workflow - Gene-Level Exploratory Analysis and Differential Expression  
+
+**Author:** Michael Love [aut, cre]  
+**Maintainer:** Michael Love <michaelisaiahlove at gmail.com>  
+
+This package offers a comprehensive workflow for gene-level RNA-seq differential expression analysis.
+It begins with raw FASTQ files and includes functionalities such as alignment to a reference genome, 
+generation of a count matrix, and exploratory data analysis (EDA) for quality assessment.  
+This package is particularly well-suited for users new to RNA-seq analysis, as it provides step-by-step 
+guidance through differential gene expression analysis and visualization of results. It serves as a 
+complete end-to-end analysis pipeline, making it an excellent resource for researchers.  
+
+### Highlights:  
+- **Cross-platform compatibility:** Available on all platforms.  
+- **High ranking:** Ranked 3 out of 30 in its category.  
+- **Rigorous testing:** Passed all tests across different operating systems.  
+- **Dependencies:** Requires 208 dependencies to function.  
+
+
+**Bibliography**:
+Love MI, Anders S, Kim V, Huber W (2016). “RNA-Seq workflow: gene-level exploratory analysis  
+and differential expression.” F1000Research. doi:10.12688/f1000research.7035.2.
