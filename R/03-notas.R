@@ -44,26 +44,26 @@ dim(rse)
 dimnames(rse)
 
 ## Nombres de tablas de cuentas que tenemos (RPKM, CPM, counts, logcounts, etc)
-assayNames(rse)
+assayNames(rse) # Muestra los nombres de las matrices (en este caso, solo "counts")
 
 ## El inicio de nuestra tabla de cuentas
 head(assay(rse))
 
 ## Información de los genes en un objeto de Bioconductor
-rowRanges(rse)
+rowRanges(rse) # Muestra la información genómica de los genes (cromosoma, posición, hebra, etc.)
 
 ## Tabla con información de los genes
 rowData(rse) # es idéntico a 'mcols(rowRanges(rse))'
 
 ## Tabla con información de las muestras
-colData(rse)
+colData(rse) #Metadatos
 
 
 ## ----rse_exercise---------------------------------------------
 ## Comando 1
-rse[1:2, ]
+rse[1:2, ] #Subconjunto de los primeros genes
 ## Comando 2
-rse[, c("A", "D", "F")]
+rse[, c("A", "D", "F")] #Subconjunto del objeto para las muestras A,D y F
 
 
 ## ----isee_basic, eval = FALSE---------------------------------
