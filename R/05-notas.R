@@ -1,6 +1,7 @@
 ## ----model.matrix---------------------------------------------
 ## ?model.matrix
-mat <- with(trees, model.matrix(log(Volume) ~ log(Height) + log(Girth)))
+## Aquí se crea una matriz para un modelo lineal
+mat <- with(trees, model.matrix(log(Volume) ~ log(Height) + log(Girth))) #Utilizamos log para linealizar la relacion
 mat
 colnames(mat)
 
@@ -33,6 +34,7 @@ cowplot::plot_grid(plotlist = vd$plotlist)
 ## Generalmente estas restas se hacen entre columnas y entre filas
 ## En conclusión nos permite dar una interpretación
 
+## La función del model.matrix crea una matriz para un posterior análisis
 mat2 <- with(sampleData, model.matri(~ genotype + treatment)
 mat2
 sampleData
